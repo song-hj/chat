@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线聊天</title>
+<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-current" id="Router-message-index">
+			<!--#include virtual='/foot.shtml'-->
+			<header class="bar bar-nav">
+				<h1 class="title">消息</h1>
+			</header>
+			<div class="content native-scroll">
+				<div class="list-block contacts-block" style="margin-top: -1px;">
+					<div class="list-group" id="J_message_list">
+						<ul>
+							<!-- <li data-fid="1">
+							<div class="item-content">
+								<div class="item-inner row">
+								    <span class="message-badge">2</span>
+									<img class="col-15"
+										src="http://wx.qlogo.cn/mmopen/CMbWwRQFQTMq4RE0m0bbWKAChSSr3OVMkfxTFDBfmLJ9E0QQOzRhbZTEibXd43weCMPkufyTYjGibP0k4j3cCzRMibiaTxgwhqJW/0">
+									<div class="col-85">
+										<div class="row">
+											<span class="item-left col-50 font-size">习近平</span>
+											<span class="item-right col-50 font-size-left">昨天</span>
+										</div>
+										<div class="row">
+										   <span class="item-left col-50 font-size-left">老习，在干啥呢</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li data-fid="2">
+							<div class="item-content">
+								<div class="item-inner row">
+									<img class="col-15"
+										src="http://wx.qlogo.cn/mmopen/CMbWwRQFQTMq4RE0m0bbWKAChSSr3OVMkfxTFDBfmLJ9E0QQOzRhbZTEibXd43weCMPkufyTYjGibP0k4j3cCzRMibiaTxgwhqJW/0">
+									<div class="col-85">
+										<div class="row">
+											<span class="item-left col-50 font-size">牛逼</span>
+											<span class="item-right col-50 font-size-left">昨天</span>
+										</div>
+										<div class="row">
+										   <span class="item-left col-50 font-size-left">牛逼</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li> -->
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

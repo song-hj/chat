@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线聊天</title>
+<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-current" id="Router-message-send">
+			<nav class="bar bar-footer">
+			    <textarea id="J_message" class="pull-left-message" maxlength="200"></textarea>
+				<a href="#" class="pull-right-message-disabled" id="J_sendMsg">发送</a>
+			</nav>
+			<header class="bar bar-nav">
+			    <a class="icon icon-left pull-left disable-router" href="/message/index.shtml"></a>
+				<h1 class="title"><!-- 汤姆 --></h1>
+			</header>
+			<div class="content pull-to-refresh-content infinite-scroll" id="J_message_scroll">
+				<!-- 加载提示符 -->
+				<div class="pull-to-refresh-layer">
+					<div class="preloader"></div>
+					<div class="pull-to-refresh-arrow"></div>
+				</div>
+				<input type="hidden" value="0" id="pageNo" />
+				<ul class="message-list">
+					<!-- <li>
+						<img class="item-head-left" src="http://192.168.1.243:83/cps/upload/T1gyETByJT1RCvBVdK">
+						<div class="item-ico-left"></div>
+						<div class="item-message-left">
+						是的开发建设两地分居善良的房间看电视
+						</div>
+					</li>
+					<li>
+						<img class="item-head-left" src="http://192.168.1.243:83/cps/upload/T1gyETByJT1RCvBVdK">
+						<div class="item-ico-left"></div>
+						<div class="item-message-left">
+						是的开发建设两地分居善良的房间看电视建设两地分居善良的房间看电视建设两地分居善良的房间看电视建设两地分居善良的房间看电视
+						</div>
+					</li>
+					<li>
+						<img class="item-head-right" src="http://192.168.1.243:83/cps/upload/T1gyETByJT1RCvBVdK">
+						<div class="item-ico-right"></div>
+						<div class="item-message-right">
+						是的开发建设两地分
+						</div>
+					</li>
+					<li>
+						<img class="item-head-left" src="http://192.168.1.243:83/cps/upload/T1gyETByJT1RCvBVdK">
+						<div class="item-ico-left"></div>
+						<div class="item-message-left">
+						是的开发建设两地分居善良的房间看电视
+						</div>
+					</li>
+					<li>
+						<img class="item-head-right" src="http://192.168.1.243:83/cps/upload/T1gyETByJT1RCvBVdK">
+						<div class="item-ico-right"></div>
+						<div class="item-message-right">
+						是的开发建设两地分
+						</div>
+					</li> -->
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

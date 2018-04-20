@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	    http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/context 
+	    http://www.springframework.org/schema/context/spring-context.xsd
+	    http://www.springframework.org/schema/security 
+	    http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<!-- <beans:bean id="loggerListener"
+		class="org.springframework.security.authentication.event.LoggerListener" />
+	
+	<global-method-security secured-annotations="enabled" /> -->
+	
+	<!--不用Filter去处理的url -->
+	<http pattern="/domain_error*" security="none" />  
+	<http pattern="*.js" security="none" />
+	<http pattern="*.css" security="none" />  
+	<http pattern="*.gif" security="none" />  
+	<http pattern="*.jpg" security="none" />  
+	<http pattern="*.jpeg" security="none" />  
+	<http pattern="*.png" security="none" />  
+	<http pattern="*.tbi" security="none" />  
+	<http pattern="*.bmp" security="none" />
+	
+    
+</beans:beans>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线聊天</title>
+<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-current" id="Router-friends-index">
+			<!--#include virtual='/foot.shtml'-->
+			<header class="bar bar-nav">
+				<!-- <a href="/friends/addfriend.shtml" class="button button-link button-nav pull-right">添加</a> -->
+				<h1 class="title">联系人</h1>
+			</header>
+			<div class="bar bar-header-secondary">
+				<div class="searchbar">
+					<a class="searchbar-cancel">取消</a>
+					<div class="search-input">
+						<label class="icon icon-search" for="search"></label> 
+						<input type="search" id="search" placeholder="搜索">
+					</div>
+				</div>
+			</div>
+			<div class="content native-scroll">
+				<div class="list-block contacts-block">
+					<div class="list-group">
+						<ul>
+							<li>
+								<div class="item-content" id="J_Friend">
+									<div class="item-inner row">
+										<img class="col-15"
+											src="/resources/images/newf.png">
+										<div class="col-85 font-size">新的朋友</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-group">
+						<ul id="J_users">
+							<!-- <li>
+								<div class="item-content">
+								    <div class="item-inner row">
+										<img class="col-15" src="/resources/images/head.jpg">
+										<div class="col-85 font-size">标题245456</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content">
+								    <div class="item-inner row">
+										<img class="col-15" src="/resources/images/head.jpg">
+										<div class="col-85 font-size">标题2</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content">
+								    <div class="item-inner row">
+										<img class="col-15" src="/resources/images/head.jpg">
+										<div class="col-85 font-size">标题2</div>
+									</div>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+					<!-- <div class="list-group">
+						<ul>
+							<li class="list-group-title">B</li>
+							<li>
+								<div class="item-content">
+								    <div class="item-inner row">
+										<img class="col-15" src="http://wx.qlogo.cn/mmopen/CMbWwRQFQTMq4RE0m0bbWKAChSSr3OVMkfxTFDBfmLJ9E0QQOzRhbZTEibXd43weCMPkufyTYjGibP0k4j3cCzRMibiaTxgwhqJW/0">
+										<div class="col-85 font-size">标题2</div>
+									</div>
+								</div>
+							</li>
+							
+							<li>
+								<div class="item-content">
+								    <div class="item-inner row">
+										<img class="col-15" src="http://wx.qlogo.cn/mmopen/CMbWwRQFQTMq4RE0m0bbWKAChSSr3OVMkfxTFDBfmLJ9E0QQOzRhbZTEibXd43weCMPkufyTYjGibP0k4j3cCzRMibiaTxgwhqJW/0">
+										<div class="col-85">标题2</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div> -->
+
+				</div>
+			</div>
+		</div>
+		<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

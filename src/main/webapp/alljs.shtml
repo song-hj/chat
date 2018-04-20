@@ -1,0 +1,10 @@
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/js/libs/zepto.min.js"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/sui/js/sm.js?v=<!--#echo var='VERSION'-->"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/sui/js/sm-city-picker.js"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/sui/js/sm-extend.min.js"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/js/libs/webuploader.html5only.js"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/js/libs/stomp.min.js"></script>
+
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/js/module/core.js?v=<!--#echo var='VERSION'-->"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/js/module/mod.user.js?v=<!--#echo var='VERSION'-->"></script>
+<script src="<!--#echo var='CDN_DOMAIN'-->/resources/js/router.js?v=<!--#echo var='VERSION'-->"></script>

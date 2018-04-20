@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线聊天</title>
+<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-contacts-list" id="Router-friends-info">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left back" href="#"></a>
+				<h1 class="title">详细资料</h1>
+			</header>
+
+			<div class="content native-scroll">
+				<div class="list-block" style="margin-top: -1px;">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-media">
+									<img src="/resources/images/head.jpg" id="fileImgId" width="60">
+								</div>
+								<div class="item-inner">
+									<div class="item-title-row">
+										<div class="item-title" id="fName"></div>
+										<div class="item-subtitle">
+											<span class="label" id="userName"> <!-- 账号：songhj -->
+											</span>
+										</div>
+										<div class="item-subtitle">
+											<span class="label" id="nickName"> <!-- 昵称：S*H*J -->
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<ul style="margin-top: 10px;">
+						<li>
+							<div class="item-content">
+								<div class="item-inner" id="setFName">
+									<div class="item-title">设置备注和标签</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+
+					<ul style="margin-top: 10px;">
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">性别</div>
+									<div class="item-input">
+										<span class="label" id="sex"> <!-- 男 -->
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">地区</div>
+									<div class="item-input">
+										<span class="label" id="address"> <!-- 男 -->
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">相册</div>
+									<div class="item-input" style="padding-top: 5px;" id="photos">
+										<!-- <img width="60px" src="http://192.168.1.243:83/cps/upload/T1XRETBX_T1RCvBVdK">
+										<img width="60px" src="http://192.168.1.243:83/cps/upload/T1XRETBX_T1RCvBVdK">
+										<img width="60px" src="http://192.168.1.243:83/cps/upload/T1XRETBX_T1RCvBVdK"> -->
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">个性签名</div>
+									<div class="item-input">
+										<span class="label" id="description"> <!-- 戏全靠演技离离离离离 -->
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="content-block">
+					<a class="button button-fill button-big" id="J_send_message">发信息</a>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+	<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

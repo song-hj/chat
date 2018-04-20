@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线聊天</title>
+<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-contacts-list" id="Router-user-my">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left back" href="#"></a>
+				<h1 class="title">个人信息</h1>
+			</header>
+			
+			
+			<div class="list-block contacts-block" style="padding-top: 10px;">
+				<div class="list-group">
+					<ul>
+						<li id="uploadFile">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">头像</div>
+									<div class="item-media">
+									    <img src="/resources/images/head.jpg" width="55px;"  id="fileImgId">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">昵称</div>
+									<div class="item-title-right" id="nickName">S*H*J</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">账号</div>
+									<div class="item-title-right" id="userName">songhj</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+
+			<div class="contacts-block" style="margin-top: -15px;">
+				<div class="list-block">
+					<ul>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">性别</div>
+									<div class="item-title-right" id="sex">男</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">地区</div>
+									<div class="item-title-right" id="city"><!-- 广东 深圳 --></div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title label">个性签名</div>
+									<div class="item-title-right">
+									   <span class="label" id="description"><!-- 戏全靠演技离离离离离 --></span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+	<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="song_persistence" transaction-type="RESOURCE_LOCAL">
+		<mapping-file>orm.xml</mapping-file>
+		<class>com.song.foundation.entity</class>
+
+		<properties>
+		    <!-- 数据库连接信息 -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.1.209:3306/song?useUnicode=true&amp;characterEncoding=UTF-8" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="root1234" />
+
+			<!-- 连接池 -->
+			<property name="eclipselink.connection-pool.default.initial" value="10" />
+			<property name="eclipselink.connection-pool.default.shared" value="true" />
+			<property name="eclipselink.connection-pool.default.max" value="500" />
+			<property name="eclipselink.connection-pool.default.min" value="1" />
+			
+			<property name="eclipselink.jdbc.read-connections.min" value="20" />
+			<property name="eclipselink.jdbc.write-connections.min" value="20" />
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC" />
+			<property name="eclipselink.cache.size.default" value="100000"/>
+			<property name="eclipselink.jdbc.cache-statements" value="true"/>
+			<property name="eclipselink.jdbc.cache-statements.size" value="100000"/>
+			<property name="eclipselink.cache.shared.default" value="true"/>
+			<property name="eclipselink.query-results-cache" value="true"/>
+
+			<property name="eclipselink.logging.level" value="OFF" />
+			<property name="eclipselink.logging.level.sql" value="OFF" />
+			<!-- <property name="eclipselink.logging.level.sql" value="FINE" /> -->
+			<property name="eclipselink.logging.thread" value="false" />
+			<property name="eclipselink.logging.exceptions" value="true" />
+			<property name="eclipselink.logging.timestamp" value="true" />
+			<property name="eclipselink.weaving.changetracking" value="true"/>
+			<property name="eclipselink.jdbc.read-connections.shared" value="true"/>
+			<property name="eclipselink.weaving" value="static" />
+
+	        <!-- 下面设置deploy生成数据库表,undeploy时删除表,同类属性还有create-tables,none,drop-and-create-tables -->
+	        <!-- <property name="eclipselink.ddl-generation" value="create-tables" /> -->
+			
+		</properties>
+	</persistence-unit>
+
+</persistence>

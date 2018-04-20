@@ -1,0 +1,15 @@
+<nav class="bar bar-tab" id="J_site_footer">
+    <a class="tab-item" href="/message/index.shtml">
+        <span class="icon icon-message"></span>
+        <span class="tab-label">消息</span>
+        <!-- <span class="badge">1</span> -->
+    </a>
+    <a class="tab-item" href="/friends/index.shtml">
+        <span class="icon icon-friends"></span>
+        <span class="tab-label">联系人</span>
+    </a>
+    <a class="tab-item" href="/user/index.shtml">
+        <span class="icon icon-me"></span>
+        <span class="tab-label">我</span>
+    </a>
+</nav>

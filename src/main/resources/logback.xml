@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration debug="true">
+	<!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->    
+    <property name="LOG_HOME" value="logdir" />  
+    <!-- 控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    	<Encoding>UTF-8</Encoding>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 出错日志 appender  -->
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<Encoding>UTF-8</Encoding>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天回滚 daily -->
+            <!-- log.dir 在maven profile里配置 -->
+            <fileNamePattern>${LOG_HOME}/mvc-error-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 访问日志 appender  -->
+    <appender name="ACCESS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<Encoding>UTF-8</Encoding>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天回滚 daily -->
+            <fileNamePattern>${LOG_HOME}/mvc-access-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 访问日志 appender  -->
+    <appender name="SYS-USER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<Encoding>UTF-8</Encoding>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天回滚 daily -->
+            <fileNamePattern>${LOG_HOME}/mvc-sys-user-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 访问日志 appender  -->
+    <appender name="SMS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<Encoding>UTF-8</Encoding>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天回滚 daily -->
+            <fileNamePattern>${LOG_HOME}/mvc-sms-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 60天 -->
+            <maxHistory>60</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+    </root>
+
+    <!--<logger name="org.apache" level="debug">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+
+    <!--错误日志-->
+    <logger name="error" level="error">
+        <appender-ref ref="ERROR"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <!--访问日志-->
+    <logger name="access" level="info">
+        <appender-ref ref="ACCESS"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <!--系统用户操作日志-->
+    <logger name="sys-user" level="info">
+        <appender-ref ref="SYS-USER"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+	<logger name="sms" level="info">
+			<appender-ref ref="SMS" />
+            <appender-ref ref="STDOUT"/>
+    </logger>
+
+    
+</configuration>
+
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>在线聊天</title>
+	<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-current" id="Router-user-index">
+			<!--#include virtual='/foot.shtml'-->
+			<header class="bar bar-nav">
+				<h1 class="title">个人中心</h1>
+			</header>
+			<div class="content native-scroll">
+				<div class="list-block" style="margin-top: -1px;">
+					<ul>
+						<li>
+							<div class="item-content" style="padding-top: 10px;">
+								<div class="item-media">
+									<img src="/resources/images/head.jpg" id="fileImgId" width="60">
+								</div>
+								<div class="item-inner" id="myInfo">
+									<div class="item-title-row">
+										<div class="item-title" id="nickName">
+											<!-- S*H*J -->
+										</div>
+										<div class="item-subtitle" id="userName"
+										style="color: #8e8e8e;">
+										<!-- 账号：shj1024989668 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<ul style="margin-top: 10px;">
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">
+									<i class="icon icon-star item-heght"></i> <span>&nbsp;&nbsp;朋友圈</span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">
+									<i class="icon icon-star icon-picture"></i> <span>&nbsp;&nbsp;相册</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+
+				<ul style="margin-top: 10px;">
+					<li>
+						<div class="item-content">
+							<div class="item-inner">
+								<div class="item-title">
+									<i class="icon icon-settings item-heght"></i> <span>&nbsp;&nbsp;设置</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

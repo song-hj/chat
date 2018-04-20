@@ -1,0 +1,24 @@
+<meta name="keywords" content="一天24小时都可以免费在线聊天，美女多多的" />
+<meta name="description" content="在线聊天" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="x5-fullscreen" content="true">
+<!--#set var="VERSION" value="3.23"-->
+<!--#set var="CDN_DOMAIN" value="" -->
+<link rel="shortcut icon" href="<!--#echo var='CDN_DOMAIN'-->/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/resources/sui/css/sm.min.css?v=<!--#echo var='VERSION'-->">
+<link rel="stylesheet" href="<!--#echo var='CDN_DOMAIN'-->/resources/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="<!--#echo var='CDN_DOMAIN'-->/resources/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="<!--#echo var='CDN_DOMAIN'-->/resources/css/mod.css?v=<!--#echo var='VERSION'-->">
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?4320d635415dcfd7831a11fa64aec173";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>

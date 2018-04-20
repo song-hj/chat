@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>在线聊天</title>
+<!--#include virtual="/allhead.shtml"-->
+</head>
+
+<body>
+	<div class="page-group">
+		<div class="page page-current" id="Router-friends-add">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left back" href="#"></a>
+				<h1 class="title">添加朋友</h1>
+			</header>
+			<div class="bar bar-header-secondary">
+				<div class="searchbar">
+					<a class="searchbar-cancel" id="search">查找</a>
+					<div class="search-input">
+						<label class="icon icon-search" for="search"></label> 
+						<input type="search" id="searchVal" placeholder="账号/手机号">
+					</div>
+				</div>
+			</div>
+			<div class="content native-scroll">
+				<div class="list-block contacts-block">
+					<div class="list-group">
+						<ul>
+						    <!-- <li>
+								<div class="item-content">
+								    <div class="item-inner">
+								        <div class="item-title"></div>
+										<div class="item-title">该用户不存在</div>
+										<div class="item-title"></div>
+									</div>
+								</div>
+							</li> -->
+							<!-- <li class="item-content">
+								<div class="item-media">
+									<img class="col-15" src="/resources/images/head.jpg" width="38px">
+								</div>
+								<div class="item-inner">
+									<div class="item-title" id="nickName">S*H*J</div>
+									<div class="item-after">
+									   <button class="button button-link" id="J_add">添加</button>
+									</div>
+								</div>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--#include virtual="/alljs.shtml"-->
+</body>
+
+</html>

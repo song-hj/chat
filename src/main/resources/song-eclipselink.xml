@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	    http://www.springframework.org/schema/context 
+	    http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	    http://www.springframework.org/schema/aop  
+	    http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+	    http://www.springframework.org/schema/tx 
+	    http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	    http://www.springframework.org/schema/data/jpa 
+	    http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<!-- 引入配置信息 -->
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="packagesToScan" value="com.song.foundation.entity" />
+		<property name="persistenceXmlLocation" value="classpath:META-INF/persistence.xml" />
+		<property name="persistenceUnitName" value="${jpa.persistenceUnitName}" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter">
+				<property name="generateDdl" value="${jpa.generateDdl}" />
+				<property name="database" value="${jpa.database}" />
+				<property name="showSql" value="${jpa.showSql}" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<!-- 重要配置：启用扫描并自动创建代理的功能 -->
+	<jpa:repositories base-package="com.song.foundation.dao" 
+	        repository-impl-postfix="Impl" 
+	        factory-class="com.song.base.repository.support.SimpleBaseRepositoryFactoryBean"
+	        entity-manager-factory-ref="entityManagerFactory" />
+	
+	<!-- Jpa 事务管理器 -->
+	<bean name="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+
+	<!-- 开启注解事务 -->
+	<!-- <tx:annotation-driven transaction-manager="transactionManager" /> -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- 事务执行方式 REQUIRED：指定当前方法必需在事务环境中运行,如果当前有事务环境就加入当前正在执行的事务环境,如果当前没有事务，就新建一个事务。这是默认值。 -->
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="execute*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="set*" propagation="REQUIRED" />
+			<tx:method name="import*" propagation="REQUIRED" />
+			<tx:method name="get*" read-only="true" propagation="SUPPORTS" />
+			<tx:method name="find*" read-only="true" propagation="SUPPORTS" />
+			<!-- 指定当前方法以非事务方式执行操作，如果当前存在事务，就把当前事务挂起，等我以非事务的状态运行完，再继续原来的事务，查询定义即可read-only="true" 
+				表示只读 -->
+			<tx:method name="*" propagation="NOT_SUPPORTED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 类型转换及数据格式化 -->
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean" />
+
+	<!-- 直接把id转换为entity 必须非lazy否则无法注册 -->
+	<bean id="domainClassConverter"
+		class="org.springframework.data.repository.support.DomainClassConverter">
+		<constructor-arg ref="conversionService" />
+	</bean>
+
+</beans>
